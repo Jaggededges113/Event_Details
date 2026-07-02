@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Event Details — EVENT_NAME</title>
-  <meta name="description" content="Event details page for EVENT_NAME. Scan the QR code to open on your phone.">
+  <title>Event Details — Roll For Weatherization</title>
+  <meta name="description" content="Event details page for Roll For Weatherization. Scan the QR code to open on your phone.">
   <style>
     :root{--accent:#0b74de;--bg:#f7f9fc;--card:#ffffff}
     html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#111}
@@ -18,65 +18,81 @@
     a.btn{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none}
     .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
     footer{margin-top:18px;text-align:center;color:#667;font-size:0.9rem}
+    .qr{display:block;margin:14px auto;max-width:240px}
+    .event-logo{display:block;max-width:160px;height:auto;margin:0 0 12px;border-radius:8px}
     @media (max-width:420px){.wrap{margin:10px;padding:12px}}
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "EVENT_NAME",
-    "startDate": "YYYY-MM-DDTHH:MM",
+    "name": "Roll For Weatherization",
+    "startDate": "2026-07-18T15:00-05:00",
+    "endDate": "2026-07-18T17:00-05:00",
     "location": {
       "@type": "Place",
-      "name": "LOCATION_NAME",
-      "address": "LOCATION_ADDRESS"
+      "name": "Bret Harte Elementary School",
+      "address": "1556 E 56th St, Chicago, IL 60637"
     },
-    "description": "SHORT_DESCRIPTION"
+    "description": "Roll For Weatherization — Doors open at 2:00 PM Central Time. First show 3:00 PM (2 hours). Second show 7:00 PM (2 hours)."
   }
   </script>
 </head>
 <body>
   <main class="wrap">
     <div class="card">
-      <h1>EVENT_NAME</h1>
-      <div class="muted">DATE — TIME</div>
+      <img src="assets/logo.svg" class="event-logo" alt="RECO logo">
+      <h1>Roll For Weatherization</h1>
+      <div class="muted">July 18, 2026 — Doors: 2:00 PM CT · First show: 3:00 PM CT (2 hours) · Second show: 7:00 PM CT (2 hours)</div>
 
       <div class="meta">
-        <div class="pill">LOCATION_NAME</div>
-        <div class="pill">Free / Ticketed</div>
+        <div class="pill">Bret Harte Elementary School</div>
+        <div class="pill">1556 E 56th St, Chicago, IL 60637</div>
       </div>
 
-      <p>SHORT_DESCRIPTION: A short, friendly paragraph describing the event. Replace these placeholder values with the real event text before publishing.</p>
+      <p>Join us for Roll For Weatherization — a community event to support local weatherization efforts. Doors open at 2:00 PM Central Time. There are two performances: the first starts at 3:00 PM and runs for 2 hours; the second starts at 7:00 PM and runs for 2 hours. Replace this paragraph with more details if needed.</p>
 
       <div class="section">
         <h3>Schedule</h3>
         <ul>
-          <li>HH:MM — Opening / Welcome</li>
-          <li>HH:MM — Main presentation</li>
-          <li>HH:MM — Networking / Q&amp;A</li>
+          <li>2:00 PM CT — Doors open</li>
+          <li>3:00 PM CT — First show (3:00–5:00 PM CT)</li>
+          <li>7:00 PM CT — Second show (7:00–9:00 PM CT)</li>
         </ul>
       </div>
 
       <div class="section">
         <h3>Location & directions</h3>
-        <p>LOCATION_ADDRESS</p>
+        <p>Bret Harte Elementary School<br>1556 E 56th St, Chicago, IL 60637</p>
         <div class="links">
-          <a class="btn" href="MAP_LINK" target="_blank" rel="noopener">Open in Maps</a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=LOCATION_ADDRESS" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=1556+E+56th+St+Chicago+IL+60637" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=1556+E+56th+St+Chicago+IL+60637" target="_blank" rel="noopener">Get directions</a>
         </div>
       </div>
 
       <div class="section">
         <h3>Contact</h3>
-        <p>ORGANIZER_NAME — <a href="mailto:ORGANIZER_EMAIL">ORGANIZER_EMAIL</a> — <a href="tel:ORGANIZER_PHONE">ORGANIZER_PHONE</a></p>
+        <p>Zac — <a href="mailto:recosocialmedia@gmail.com">recosocialmedia@gmail.com</a></p>
       </div>
 
       <div class="section">
-        <h3>Share</h3>
+        <h3>Add to calendar</h3>
+        <p class="muted">(Opens Google Calendar with the selected show pre-filled)</p>
         <div class="links">
-          <a class="btn" href="mailto:?subject=Join%20me%20at%20EVENT_NAME&body=I%27m%20going%20to%20EVENT_NAME%20on%20DATE%20at%20LOCATION_NAME.%20Open%20this%20link:%20" target="_blank">Email</a>
-          <a class="btn" href="#" id="addCalendar">Add to calendar</a>
+          <!-- Times in UTC: First show 2026-07-18 20:00Z to 22:00Z (3:00–5:00 PM CT) -->
+          <a class="btn" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Roll%20For%20Weatherization%20%28First%20Show%29&details=Doors%20open%20at%202%3A00%20PM%20CT.%20First%20show%20runs%203%3A00%20PM%20to%205%3A00%20PM%20CT.&location=1556%20E%2056th%20St%2C%20Chicago%2C%20IL%2060637&dates=20260718T200000Z/20260718T220000Z" target="_blank" rel="noopener">Add first show</a>
+          <!-- Times in UTC: Second show 2026-07-19 00:00Z to 02:00Z (7:00–9:00 PM CT) -->
+          <a class="btn" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Roll%20For%20Weatherization%20%28Second%20Show%29&details=Doors%20open%20at%202%3A00%20PM%20CT.%20Second%20show%20runs%207%3A00%20PM%20to%209%3A00%20PM%20CT.&location=1556%20E%2056th%20St%2C%20Chicago%2C%20IL%2060637&dates=20260719T000000Z/20260719T020000Z" target="_blank" rel="noopener">Add second show</a>
         </div>
+      </div>
+
+      <div class="section">
+        <h3>QR code</h3>
+        <p class="muted">Scan this QR code to open the event page on your phone (published via GitHub Pages):</p>
+        <a href="https://Jaggededges113.github.io/Event_Details/" target="_blank" rel="noopener">
+          <img class="qr" src="qr.svg" alt="QR code linking to the Roll For Weatherization event page">
+        </a>
+        <p class="muted">If the GitHub Pages site is not yet published, enable Pages in the repository settings (Source: main / root) — the page URL will be https://Jaggededges113.github.io/Event_Details/</p>
       </div>
 
       <div class="section">
@@ -85,22 +101,9 @@
     </div>
 
     <footer>
-      <div class="muted">Presented by ORGANIZER_NAME</div>
+      <div class="muted">Presented by the Roll For Weatherization organizers</div>
     </footer>
   </main>
 
-  <script>
-    // Simple "Add to calendar" for Google Calendar (opens new tab with pre-filled event)
-    document.getElementById('addCalendar').addEventListener('click', function(e){
-      e.preventDefault();
-      var title = encodeURIComponent('EVENT_NAME');
-      var details = encodeURIComponent('SHORT_DESCRIPTION');
-      var location = encodeURIComponent('LOCATION_ADDRESS');
-      var start = 'YYYYMMDDTHHMM00Z'; // replace with UTC time in YYYYMMDDTHHMMSSZ
-      var end = 'YYYYMMDDTHHMM00Z';
-      var url = 'https://www.google.com/calendar/render?action=TEMPLATE&text='+title+'&details='+details+'&location='+location+'&dates='+start+'/'+end;
-      window.open(url, '_blank');
-    });
-  </script>
 </body>
 </html>
