@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Event Details — EVENT_NAME</title>
+  <meta name="description" content="Event details page for EVENT_NAME. Scan the QR code to open on your phone.">
+  <style>
+    :root{--accent:#0b74de;--bg:#f7f9fc;--card:#ffffff}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#111}
+    .wrap{max-width:720px;margin:24px auto;padding:16px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(20,30,50,0.06)}
+    h1{margin:0 0 6px;font-size:1.4rem}
+    .muted{color:#556; font-size:0.95rem}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+    .meta .pill{background:#eef6ff;color:var(--accent);padding:8px 10px;border-radius:999px;font-weight:600}
+    .section{margin-top:14px}
+    a.btn{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none}
+    .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    footer{margin-top:18px;text-align:center;color:#667;font-size:0.9rem}
+    @media (max-width:420px){.wrap{margin:10px;padding:12px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "EVENT_NAME",
+    "startDate": "YYYY-MM-DDTHH:MM",
+    "location": {
+      "@type": "Place",
+      "name": "LOCATION_NAME",
+      "address": "LOCATION_ADDRESS"
+    },
+    "description": "SHORT_DESCRIPTION"
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>EVENT_NAME</h1>
+      <div class="muted">DATE — TIME</div>
+
+      <div class="meta">
+        <div class="pill">LOCATION_NAME</div>
+        <div class="pill">Free / Ticketed</div>
+      </div>
+
+      <p>SHORT_DESCRIPTION: A short, friendly paragraph describing the event. Replace these placeholder values with the real event text before publishing.</p>
+
+      <div class="section">
+        <h3>Schedule</h3>
+        <ul>
+          <li>HH:MM — Opening / Welcome</li>
+          <li>HH:MM — Main presentation</li>
+          <li>HH:MM — Networking / Q&amp;A</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Location & directions</h3>
+        <p>LOCATION_ADDRESS</p>
+        <div class="links">
+          <a class="btn" href="MAP_LINK" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=LOCATION_ADDRESS" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <p>ORGANIZER_NAME — <a href="mailto:ORGANIZER_EMAIL">ORGANIZER_EMAIL</a> — <a href="tel:ORGANIZER_PHONE">ORGANIZER_PHONE</a></p>
+      </div>
+
+      <div class="section">
+        <h3>Share</h3>
+        <div class="links">
+          <a class="btn" href="mailto:?subject=Join%20me%20at%20EVENT_NAME&body=I%27m%20going%20to%20EVENT_NAME%20on%20DATE%20at%20LOCATION_NAME.%20Open%20this%20link:%20" target="_blank">Email</a>
+          <a class="btn" href="#" id="addCalendar">Add to calendar</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <small class="muted">This page is optimized for mobile devices and intended to be opened via a QR code.</small>
+      </div>
+    </div>
+
+    <footer>
+      <div class="muted">Presented by ORGANIZER_NAME</div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple "Add to calendar" for Google Calendar (opens new tab with pre-filled event)
+    document.getElementById('addCalendar').addEventListener('click', function(e){
+      e.preventDefault();
+      var title = encodeURIComponent('EVENT_NAME');
+      var details = encodeURIComponent('SHORT_DESCRIPTION');
+      var location = encodeURIComponent('LOCATION_ADDRESS');
+      var start = 'YYYYMMDDTHHMM00Z'; // replace with UTC time in YYYYMMDDTHHMMSSZ
+      var end = 'YYYYMMDDTHHMM00Z';
+      var url = 'https://www.google.com/calendar/render?action=TEMPLATE&text='+title+'&details='+details+'&location='+location+'&dates='+start+'/'+end;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
